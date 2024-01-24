@@ -1,9 +1,8 @@
 import Button from 'react-bootstrap/Button';
-import CarouselCard from 'react-bootstrap/Card';s
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 
-const CarouselCard = ({ title, text, imageUrl }) => {
+const CarouselCard = ({ title, text, imageUrl, btnText, disclose }) => {
   return (
     <Card style={{ width: '18rem' }}>
       <Card.Img variant="top" src={imageUrl} />
@@ -11,8 +10,9 @@ const CarouselCard = ({ title, text, imageUrl }) => {
         <Card.Title>{title}</Card.Title>
         <Card.Text>
           {text}
+          {disclose}
         </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
+        <Button variant="primary">{btnText}</Button>
       </Card.Body>
     </Card>
   );
